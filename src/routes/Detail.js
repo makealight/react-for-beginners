@@ -29,7 +29,7 @@ function Detail() {
         minHeight: "100vh",
         // 🌟 진짜 넷플릭스 마법: backdrop 이미지를 배경에 깔고, 그 위에 검은색 반투명 필터를 덮습니다!
         backgroundImage: movie.backdrop_path
-          ? `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${movie.backdrop_path})`
+          ? `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${`https://wsrv.nl/?url=${movie.backdrop_path}`})`
           : "#1e272e",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -52,7 +52,7 @@ function Detail() {
           {/* 👈 왼쪽: 포스터 영역 (이제 데이터에 있는 진짜 주소를 바로 씁니다!) */}
           <div>
             <img
-              src={movie.poster_path}
+              src={`https://wsrv.nl/?url=${movie.poster_path}`}
               alt={movie.title}
               style={{
                 borderRadius: "15px",
